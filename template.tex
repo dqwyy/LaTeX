@@ -1,0 +1,53 @@
+\documentclass{article}
+%Compile with xeLaTeX
+\usepackage[scheme=Chinese]{ctex}        %scheme=<chinese|plain>, chinese as default. If you just want to support CJK characters instead of typesetting them, choose plain.
+\usepackage{xeCJK}        %Put the package "xeCJK" after "ctex" to avoid the preferences of xeCJK to be overwritten by ctex.
+	\xeCJKsetup{
+		CJKspace=true,        %"false" means ignore the spaces among CJK characters.
+		CJKmath=true,        %Support CJK characters in math environment.
+		CJKecglue={\hskip 0pt plus 0.08\baselineskip},        %Set the spacing between CJK and latin, one space as default, set to no space here.
+		PlainEquation=true,        %Enable this if you are using $$ ... $$ to insert display formular. Using \[ ... \] instead is recommended.
+		AutoFallBack=true,
+		AutoFakeBold=true,
+		AutoFakeSlant=true}
+	%\setmainfont{Times New Roman}
+	%\setsansfont{Arial}
+	\xeCJKDeclareSubCJKBlock{ExtB}{"20000 -> "2A6DF}
+	\setCJKmainfont[ExtB=PMingLiU-ExtB]{PMingLiU}
+	\setCJKsansfont{Microsoft JhengHei}
+	\setCJKmonofont{Microsoft JhengHei}
+	%Add commands for CJK font family.
+		%zh-TW
+		\newCJKfontfamily[PMingLiU]\PMingLiU{PMingLiU}
+		\newCJKfontfamily[Microsoft JhengHei]\MicrosoftJhengHei{Microsoft JhengHei}
+		\newCJKfontfamily[Microsoft JhengHei]\MSJH{Microsoft JhengHei}
+		\newCJKfontfamily[DFKai-SB]\DFKaiSB{DFKai-SB}
+		%zh-CN
+		\newCJKfontfamily[SimSun]\SimSun{SimSun}
+		\newCJKfontfamily[SimHei]\SimHei{SimHei}
+		\newCJKfontfamily[Microsoft YaHei]\MicrosoftYaHei{MicrosoftYaHei}
+		\newCJKfontfamily[Microsoft YaHei]\MSYH{MicrosoftYaHei}
+		\newCJKfontfamily[KaiTi]\KaiTi{KaiTi}
+		\newCJKfontfamily[FangSong]\FangSong{FangSong}
+		%ja
+		\newCJKfontfamily[MS PMincho]\MSPMincho{MS PMincho}
+		\newCJKfontfamily[MS PMincho]\MSPM{MS PMincho}
+		\newCJKfontfamily[MS PGothic]\MSPGothic{MS PGothic}
+		\newCJKfontfamily[MS PGothic]\MSPG{MS PGothic}
+		%en
+		\newfontfamily \TimesNewRoman{Times New Roman}
+		\newfontfamily \TNR{Times New Roman}
+		\newfontfamily \Arial{Arial}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{geometry}
+\usepackage{hyperref}
+\usepackage{indentfirst}
+\usepackage{enumitem}        %For customizing the bullet list and numered list.
+\usepackage{listings}        %For typesetting the source code.
+%%%%%%%%%%    PREAMBLE END     %%%%%%%%%%
+%
+%%%%%%%%%%  DOCUMENT BEGIN  %%%%%%%%%%
+\begin{document}
+
+\end{document}
